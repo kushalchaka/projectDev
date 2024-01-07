@@ -1,3 +1,3 @@
-##Simple website portfolio built from scratch
+## Simple website portfolio built from scratch
 
 Work in progress
