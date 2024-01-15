@@ -1,30 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work in Progress</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 100px;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Work in Progress</title>
+        <link rel="stylesheet" href="website.css">
+        <script src="website.js" defer></script> <!-- Adding 'defer' to ensure script executes after the HTML is parsed -->
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin: 100px;
+            }
+    
+            #bottomImage {
+                display: block;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Tab links -->
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Home')">Home</button>
+            <button class="tablinks" onclick="openCity(event, 'About Me')">About Me</button>
+            <button class="tablinks" onclick="openCity(event, 'Portfolio')">Portfolio</button>
+            <button class="tablinks" onclick="openCity(event, 'About This Website')">About This Website</button>
+            <button class="tablinks" onclick="openCity(event, 'Extras')">Extras</button>
+        </div>
+      
+        <!-- Tab content -->
+        <div id="Home" class="tabcontent">
+            
+            <h2>The website is a work in progress</h2>
+            <p>Check in later for more updates.</p>
+    
+            <img id="bottomImage" src="Waiting.GIF" alt="Work in Progress Image">
+        </div>
+      
+        <div id="About Me" class="tabcontent">
+            <h1>About Me</h1>
+            <p>I'm a first year computer science student. More about me coming soon after I finish this website</p>
+        </div>
+      
+        <div id="Portfolio" class="tabcontent">
+            <h1>Portfolio</h1>
+            <p>Collection of my personal projects. Will also come soon after I finish this website</p>
+        </div>
 
-        #bottomImage {
-            display: block;
-            margin: 0 auto;
-        }
-    </style>
-</head>
-<body>
-    <h1>Work in Progress</h1>
-    <p>Check in later for updates.</p>
+        <div id="About This Website" class="tabcontent">
+            <h1>About This Website</h1>
+            
+            <p>This website was built by me from scratch using HTML, CSS, and Javascript.</p>
+                
+            <p> My aim with this website was to find a fun way to 
+                learn a bit more about those languages while also having something I could show others as proof of what I have 
+                accomplished so far.</p>
+        
+        </div>
 
-    <img id="bottomImage" src="Waiting.GIF" alt="Work in Progress Image">
-</body>
+        <div id="Extras" class="tabcontent">
+            <h1>Extras</h1>
+            <p>Collection of other random things made by me that I thought would look nice here</p>
+        </div>
+
+        <script>
+            // Set the default tab to "Home" when the page loads
+            document.getElementById('Home').style.display = 'block';
+        </script>
+    </body>
 </html>
-
-
-
-
