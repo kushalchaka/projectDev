@@ -1,5 +1,4 @@
-## Simple website portfolio for me built from scratch using HTML, CSS, and Javascript
-
+## Simple website portfolio for me built from scratch using HTML
 Hosted on GitHub pages
 
 Work in progress 
