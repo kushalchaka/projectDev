@@ -3,4 +3,4 @@ Hosted on GitHub pages
 
 Work in progress 
 
-Mobile version planned once desktop version is complete
+Currently some bugs are present in the mobile version
