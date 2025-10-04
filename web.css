@@ -119,48 +119,6 @@
   --blockquote-border-color: var(--code-inline-bg);
 }
 
-:root.pink body::before,
-:root.pink body::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 20vw;
-    z-index: -1;
-    background-repeat: repeat-y;
-    background-position: top right;
-    background-size: 100% auto;
-}
-
-:root.pink body::before {
-    left: 0;
-    transform: scaleX(-1);
-}
-
-:root.pink footer {
-    background-color: #744356;
-    background-image: linear-gradient(rgba(197, 138, 159, 0.33), rgba(68, 47, 55, 0.66)),
-        url("media/charlotte.png");
-    background-size: cover;
-    background-position: center 20%;
-}
-
-:root.pink footer::after {
-    --decor-height: 26px;
-    content: "";
-    display: block;
-    position: absolute;
-    top: calc(-1 * var(--decor-height));
-    height: var(--decor-height);
-    width: 100%;
-    background-position: bottom left;
-    background-repeat: repeat-x;
-    background-size: auto;
-    transform: scaleY(-1);
-}
-
-
 
 :root.dark {
     /* Dark theme */
@@ -725,26 +683,7 @@ main [id]:target::after {
     clip-path: inset(0);
 }
 
-/* Download button */
 
-a.download_button {
-    display: inline-block;
-    font-size: 1.5625rem;
-    line-height: 49px;
-    min-width: 220px;
-    padding: 0 5px;
-    color: var(--download-button-text-color, var(--link));
-    border: 1px solid var(--download-button-border-color, #0366d6);
-    border-radius: 2px;
-    transition: all 0.3s;
-}
-
-a.download_button:is(:hover, :active, :focus) {
-    background-color: var(--download-button-background-color, rgba(3, 102, 214, 0.05));
-    text-decoration: none;
-    box-shadow: 0 2px 4px var(--download-button-shadow-color, rgba(83, 100, 255, 0.45));
-    filter: none;
-}
 
 /* Cut line */
 
@@ -1365,45 +1304,4 @@ footer>.footer-bottom {
     padding: 10px 4px;
     border-top: 1px solid #ffffff1e;
 }
-
-
-
-/* Floating images in articles */
-
-article img[float] {
-    /* Mobile screens first */
-    float: none;
-    display: block;
-    margin-inline: auto;
-    max-height: min(40vh, 250px);
-}
-
-article *+img[float] {
-    margin-block: 1rem 0;
-}
-
-@media only screen and (min-width: 800px) {
-
-    /* Wide screens. Enable floating. */
-    article img[float] {
-        float: right;
-        max-width: 33.3%;
-        margin-inline: 5px 0;
-    }
-
-    article img[float="left"] {
-        float: left;
-        margin-inline: 0 5px;
-    }
-}
-
-/* Audio elements with controls */
-
-article audio {
-    display: block;
-    max-width: 100%;
-    margin: 0.25em 0 0;
-    height: 1.8em;
-}
-
 
