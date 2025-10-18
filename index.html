@@ -14,6 +14,7 @@
   <meta property="og:site_name" content="Kushal Chakraborty">
   <meta property="og:description" content="Personal Website">
   <script defer src="web.js"></script>
+
   <style>
     .page {
       display: none;
@@ -28,16 +29,16 @@
 <body>
   <input type="checkbox" id="menu-btn" />
   <header>
-    <a href="#" class="logo" onclick="showPage('home')"><span>Kushal</span></a>
+    <a href="#" class="logo" onclick="showPage('home')"><span> Kushal</span></a>
     <div id="description">Personal Website</div>
     <nav>
       <a href="#" onclick="showPage('home')" class="guide_link">Home</a>
       <a href="#" onclick="showPage('guide')" class="guide_link">Guide</a>
-      <a href="#" onclick="showPage('about')">About</a>
-      <a href="#" onclick="showPage('projects')">Projects</a>
-      <a href="https://github.com/kushalchaka">GitHub</a>
-      <a href="#" onclick="showPage('contact')">Contact</a>
-      <a href="#" onclick="showPage('extras')">Extras</a>
+      <a href="#" onclick="showPage('about')" class="guide_link">About</a>
+      <a href="#" onclick="showPage('projects')" class="guide_link">Projects</a>
+      <a href="https://github.com/kushalchaka" class="guide_link">GitHub</a>
+      <a href="#" onclick="showPage('contact')" class="guide_link">Contact</a>
+      <a href="#" onclick="showPage('extras')" class="guide_link">Extras</a>
     </nav>
     <label class="menu-btn" for="menu-btn"><span class="menu-icon hamburger"></span></label>
   </header>
@@ -67,7 +68,6 @@
     <div id="divbody">
       <main>
 
-        <!-- HOME PAGE -->
         <section id="home" class="page active">
           <article>
             <h1 class="title">Kushal Chakraborty</h1>
@@ -75,8 +75,9 @@
             <p> Hi! I'm a third year Computer Science major in Dallas, Texas. I'm interested in programming, computer
               networking & server management, Linux, and cybersecurity. I made this website to showcase some of
               the things that I have created over the years that I found interesting.</p>
-            <p> Below I'll be explaining a bit on how to navigate this website. If you want to see some of the stuff I've worked on, then click the "Projects" tab on the top menu bar</p>
-            <p> This website is best viewed on a desktop. but I have made attempts for it to still be functional on mobile devices.</p>
+            <p> If you just want to see some of the stuff I've worked on, then click the "Projects" tab on the top menu bar</p>
+            <p> Click on the hamburger menu if you want to change the theme of the website from light mode to pink or dark mode</p>
+            <p> This website is best viewed on a desktop, but should still be functional on mobile devices</p>
             <hr>
             <h2><a href="#" onclick="showPage('guide')" class="guide_link">Guide</a></h2>
             <p> The guide tab serves as a table of contents so that you can easily jump between parts of the website. As
@@ -97,11 +98,10 @@
           </article>
         </section>
 
-        <!-- GUIDE PAGE -->
         <section id="guide" class="page">
           <article>
             <h1 class="title">Table of Contents</h1>
-            <div class="subtitle">August 22, 2025 — Kushal Chakraborty</div>
+            <div class="subtitle">Last Changes Made - October 17, 2025</div>
             <ul>
               <li><a href="#" onclick="showPage('home')" class="guide_link">Home</a></li>
               <li><a href="#" onclick="showPage('about')" class="guide_link">About</a></li>
@@ -113,32 +113,48 @@
           </article>
         </section>
 
-        <!-- ABOUT PAGE -->
         <section id="about" class="page">
           <h1>About</h1>
-          <p>One design element that I believe in is simplicity. Oftentimes, I feel like we lose some form of functionality when we
-            begin to prioritize design elements over the core functionality. I designed this website with simplicity and
-            functionality as the main priority, as I want anyone to be able to easily access the website regardless of their
-            hardware or internet speeds.</p>
+          <p>I strongly value simplicity as a core design principle. Too often, websites sacrifice functionality for flashy visuals,
+          resulting in slow load times and a frustrating user experience. I built this website with simplicity and usability in mind,
+          ensuring that anyone can navigate it easily, regardless of their device or internet connection.</p>
           <h2 class="title">Technical Skills and Experience</h2>
-          <p>Java, C, C++, Python</p>
-          <p>Windows, Ubuntu, Linux Mint, Arch Linux, Debian</p>
-          <p>Vim, NeoVim, Git, GitHub, GIMP, Krita</p>
+
+          <h3>Programming Languages</h3>
+          <ul>
+            <li>Java</li>
+            <li>C / C++</li>
+            <li>Python</li>
+          </ul>
+
+          <h3>Operating Systems</h3>
+          <ul>
+            <li>Windows</li>
+            <li>Ubuntu</li>
+            <li>Linux Mint</li>
+            <li>Arch Linux</li>
+            <li>Debian</li>
+          </ul>
+
+          <h3>Tools & Software</h3>
+          <ul>
+            <li>Vim / NeoVim</li>
+            <li>Git / GitHub</li>
+            <li>GIMP</li>
+            <li>Krita</li>
+          </ul>
         </section>
 
-        <!-- PROJECT PAGE -->
         <section id="projects" class="page">
           <h1>Projects</h1>
 
           <div class="cards">
-            <!-- Website Project -->
             <div class="card gray">
               <p class="tip">This Website</p>
               <p class="second-text">Personal Website Source Code</p>
               <a href="https://github.com/kushalchaka/projectDev" target="_blank" class="card-link">GitHub</a>
             </div>
 
-            <!-- Games -->
             <div class="card gray">
               <p class="tip">Othello</p>
               <p class="second-text">Game Recreation</p>
@@ -187,7 +203,6 @@
               <a href="https://github.com/kushalchaka/pong" target="_blank" class="card-link">GitHub</a>
             </div>
 
-            <!-- Networking Projects -->
             <div class="card gray">
               <p class="tip">Word Guessing Game</p>
               <p class="second-text">Client-Server Networking</p>
@@ -208,8 +223,6 @@
           </div>
         </section>
 
-
-        <!-- CONTACT PAGE -->
         <section id="contact" class="page">
           <h1>Contact</h1>
           <p>For the quickest method of contact, you can reach me at my email</p>
@@ -217,7 +230,6 @@
 	  <p> I check my email daily, so expect a response back within a few hours on most days. </p>
         </section>
 
-        <!-- EXTRAS PAGE -->
         <section id="extras" class="page">
           <h1>Extras</h1>
           <p>Expect to see some cool things in the near future :)</p>

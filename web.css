@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-/* Global */
-
 :root,
 :root.light {
   color-scheme: light;
@@ -66,8 +64,6 @@
   --hover-underline-color: transparent;
 }
 
-/* Pink theme */
-
 :root.pink {
   color-scheme: light;
 
@@ -121,7 +117,6 @@
 
 
 :root.dark {
-    /* Dark theme */
     color-scheme: dark;
 
     --background-secondary-color: rgba(255, 255, 255, 0.25);
@@ -132,7 +127,6 @@
     --link-visited: var(--link);
     --header-color: var(--link-black);
 
-    /* Headers in articles */
     --color-article-h2: #e42253;
     --color-article-h3: #23bbda;
     --color-article-h4: #21cf64;
@@ -178,13 +172,17 @@
     --nagbar-border: #554a38;
 
     a.anchor svg {
-        /* Fix anchor visibility */
         filter: invert(1);
     }
 }
+:root.dark .cards .gray {
+  background-color: #3a3a3a;
+}
 
-/* Main elements */
-
+:root.dark .cards .card {
+  background-color: #2b2b2b;
+  color: #f0f0f0;
+}
 *,
 *::before,
 *::after {
@@ -201,8 +199,6 @@ video {
     display: block;
     font-style: italic;
 }
-
-/* Body with sticky footer */
 
 html,
 body {
@@ -236,8 +232,6 @@ body>footer {
 }
 
 
-/* Header */
-
 header {
     font-family: "Noto Serif", "DejaVu Serif", "Liberation Serif", "Times New Roman", "Noto Serif CJK JP", "IPAexMincho",
         "Yu Mincho", Georgia, Times, serif;
@@ -254,8 +248,6 @@ header {
     justify-content: space-between;
     font-size: 16px;
 }
-
-/* logo; icon and title */
 
 header a.logo,
 header a.logo:visited {
@@ -275,6 +267,7 @@ header a.logo>span {
     font-weight: bold;
     color: var(--logo-text-color, black);
     text-align: center;
+    margin-left: 8px;
     margin-right: 8px;
 }
 
@@ -289,14 +282,10 @@ header a.logo>img {
     filter: var(--logo-img-filter, none);
 }
 
-/* Hidden elements. Description is visible only on wide screens. */
-
 header #description,
 header nav {
     display: none;
 }
-
-/* Navigation */
 
 header>nav {
     clear: both;
@@ -313,8 +302,6 @@ header>nav a:visited {
     padding: 0 2px;
 }
 
-/* Important links inside Header */
-
 header>nav a.important {
     color: var(--header-important-item-color);
     background-color: var(--header-important-item-background-color);
@@ -324,8 +311,6 @@ header>nav a.important {
         background-color: var(--header-important-item-hover-background-color);
     }
 }
-
-/* Header on wide screens */
 
 @media screen and (min-width: 760px) {
     header>nav {
@@ -347,8 +332,6 @@ header>nav a.important {
         padding: 0 16px;
     }
 }
-
-/* Common rules for buttons and anchors */
 
 header a,
 header a:visited,
@@ -388,14 +371,10 @@ header :is(label, a:not(.logo)):is(:hover, :active, :focus) {
     box-shadow: inset 0 1px 2px 0 var(--header-item-focused-shadow-color, rgba(0, 8, 15, 0.125));
 }
 
-/* Mark guide link */
-
 header a.guide_link {
     --normal-underline-color: rgb(253, 122, 93);
     --hover-underline-color: rgb(200, 0, 68);
 }
-
-/* body */
 
 #divbodyholder {
     overflow-wrap: break-word;
@@ -412,13 +391,9 @@ header a.guide_link {
     box-shadow: 0 1px 4px 0 var(--elem-shadow-color);
 }
 
-/* container for articles */
-
 #divbodyholder>#divbody {
     padding-top: 0;
 }
-
-/* index page nag bar */
 
 #divbodyholder>.indexnagbar {
     color: var(--nagbar-color, black);
@@ -453,8 +428,6 @@ header a.guide_link {
         flex-flow: column nowrap;
     }
 }
-
-/* main */
 
 main *+* {
     margin-block: 1rem 0;
@@ -582,8 +555,6 @@ article a:hover {
     filter: hue-rotate(-20deg) brightness(120%);
 }
 
-/* Article headers */
-
 main :is(h1, h2, h3, h4, h5, h6) {
     margin-block: 1.5rem 0;
     line-height: 1.25;
@@ -630,11 +601,7 @@ article .subtitle {
 }
 
 
-/* Menu button */
-
 input#menu-btn {
-    /* Hide checkbox, the input tag.
-       The user clicks on the label instead. */
     display: none;
 }
 
@@ -664,8 +631,6 @@ input#menu-btn {
     height: 100%;
 }
 
-/* Hamburger */
-
 .menu-btn>.hamburger,
 .menu-btn>.hamburger::before,
 .menu-btn>.hamburger::after {
@@ -679,8 +644,6 @@ input#menu-btn {
 .menu-btn>.hamburger::after {
     top: -5px;
 }
-
-/* Hamburger checked */
 
 input#menu-btn:checked~header label.menu-btn {
     background-color: var(--header-item-focused-background-color);
@@ -701,12 +664,8 @@ input#menu-btn:checked~header .hamburger::after {
 }
 
 body:has(input#menu-btn:checked) {
-    /* When the sidebar is visible, the body shouldn't scroll.
-       Instead the user scrolls the sidebar (if the sidebar is tall enough). */
     overflow-y: hidden;
 }
-
-/* Sidebar: Jump to top button */
 
 .menu-btn>.up-arrow {
     rotate: 90deg;
@@ -728,8 +687,6 @@ body:has(input#menu-btn:checked) {
     top: -3px;
 }
 
-/* Sidebar: Close button */
-
 .menu-btn>.close-btn {
     background-color: transparent;
 }
@@ -746,8 +703,6 @@ body:has(input#menu-btn:checked) {
 .menu-btn>.close-btn::after {
     rotate: 45deg;
 }
-
-/* Sidebar */
 
 #sidebar {
     --sidebar-width: min(100vw, 400px);
@@ -772,15 +727,11 @@ body:has(input#menu-btn:checked) {
     box-shadow: var(--main-shadow), var(--overlay-shadow-off);
 }
 
-/* Opened sidebar */
-
 input#menu-btn:checked~#sidebar {
     right: 0px;
     visibility: visible;
     box-shadow: var(--main-shadow), var(--overlay-shadow-on);
 }
-
-/* Inside sidebar */
 
 #sidebar ul,
 #sidebar ol {
@@ -832,8 +783,6 @@ input#menu-btn:checked~#sidebar {
     display: none;
 }
 
-/* Sidebar: Top links */
-
 #sidebar .sidebar_header {
     display: flex;
     background-color: inherit;
@@ -866,8 +815,6 @@ input#menu-btn:checked~#sidebar {
     background-color: var(--sidebar-item-background-color-hover, #3f3f3f);
     color: var(--sidebar-important-link-color-hover, #f1f1f1);
 }
-
-/* Theme selector */
 
 .sidebar_header input[type="radio"] {
     --button-size: 14px;
@@ -904,8 +851,6 @@ input#menu-btn:checked~#sidebar {
     --theme-radio-color: rgb(94, 94, 94);
 }
 
-/* Sidebar: Buttons */
-
 #sidebar .menu-btn>.menu-icon:not(.close-btn),
 #sidebar .menu-btn>.menu-icon::before,
 #sidebar .menu-btn>.menu-icon::after {
@@ -918,8 +863,6 @@ input#menu-btn:checked~#sidebar {
 #sidebar .menu-btn:is(:hover, :active, :focus)>.menu-icon::after {
     background-color: var(--sidebar-important-link-color-hover);
 }
-
-/* Sidebar: important links */
 
 #sidebar .important-links {
     margin: 10px 20px;
@@ -944,8 +887,6 @@ input#menu-btn:checked~#sidebar {
     background-color: var(--sidebar-item-background-color-hover, #3f3f3f);
 }
 
-/* Tooltips */
-
 article :is(span, abbr)[title] {
     cursor: help;
     text-decoration: underline dotted;
@@ -956,9 +897,6 @@ article :is(span, abbr)[title]:is(:hover, :active, :focus) {
     color: rgb(159, 20, 26);
 }
 
-
-
-/* Footer */
 
 footer {
     font-size: 1rem;
