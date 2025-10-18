@@ -5,15 +5,13 @@ const ThemePicker = Object.freeze({
         document.querySelectorAll(`input[name="${this.key}"]`).forEach((input_element) => {
             input_element.addEventListener("click", () => {
                 localStorage.setItem(this.key, input_element.id);
-                // fallback for no :has() support
                 document.documentElement.className = input_element.id;
             });
         });
     },
 
     restore_theme_on_load() {
-        // Change default to 'dark'
-        const user_selected_theme = localStorage.getItem(this.key) || "dark";
+        const user_selected_theme = localStorage.getItem(this.key) || "light";
         const radio = document.querySelector(`input[name="${this.key}"]#${user_selected_theme}`);
         if (radio) radio.checked = true;
         document.documentElement.className = user_selected_theme;
